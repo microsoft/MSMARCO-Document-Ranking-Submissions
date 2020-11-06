@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>MS MARCO Document Ranking Leaderboard</title>
+    <meta name="author" content="Derek Eder">
+    <meta content="Display any CSV file as a searchable, filterable, pretty HTML table" />
+
+    <!-- Bootstrap core CSS -->
+    <link href="csv-to-html/css/bootstrap.min.css" rel="stylesheet">
+    <link href="csv-to-html/css/dataTables.bootstrap.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script type="text/javascript" src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    </style>
+
+  </head>
+
+  <body>
+    <div class="container-fluid">
+
+      <h2>MS MARCO Document Ranking Leaderboard</h2>
+
+      <div id="table-container"></div>
+
+    </div><!-- /.container -->
+
+    <!--footer class='footer'>
+      <div class='container-fluid'>
+        <hr />
+        <p class='pull-right'><a href='https://github.com/derekeder/csv-to-html-table'>CSV to HTML Table</a> by <a href='http://derekeder.com'>Derek Eder</a></p>
+      </div>
+    </footer-->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="csv-to-html/js/jquery.min.js"></script>
+    <script type="text/javascript" src="csv-to-html/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="csv-to-html/js/jquery.csv.min.js"></script>
+    <script type="text/javascript" src="csv-to-html/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="csv-to-html/js/dataTables.bootstrap.js"></script>
+    <script type="text/javascript" src="csv-to-html/js/csv_to_html_table.js"></script>
+
+
+    <script type="text/javascript">
+      function id_format(s) {
+        if (s) {
+          return "<tt><a href='https://github.com/microsoft/MSMARCO-Document-Ranking-Archive/tree/main/submissions/"  +
+            s + "/'>" + s.replaceAll("-", "&#x2011;")+ "</a></tt>";
+          // replace with non-break space to make it look prettier
+        } else {
+          return "";
+        }
+      }
+
+      function description_format(s) {
+        if (s)
+          return "<b>" + s + "</b>";
+        else
+          return "";
+      }
+
+      function paper_link(link) {
+        if (link)
+          return "[<a href='" + link + "' target='_blank'>paper</a>]";
+        else
+          return "";
+      }
+
+      function code_link(link) {
+        if (link)
+          return "[<a href='" + link + "' target='_blank'>code</a>]";
+        else
+          return "";
+      }
+
+      function tweet_link(tweetid) {
+        if (tweetid)
+          return "[<a href=\"https://twitter.com/MSMarcoAI/status/" + tweetid + "\" target=\"_blank\">tweet</a>]";
+        else
+          return "";
+      }
+
+      function submission_link(link) {
+        if (link)
+          return "[<a href='" + link + "' target='_blank'>submission</a>]";
+        else
+          return "";
+      }
+
+      CsvToHtmlTable.init({
+        csv_path: "leaderboard.csv",
+        element: "table-container", 
+        allow_download: false,
+        csv_options: {separator: ',', delimiter: '"'},
+        datatables_options: {"paging": false, "order": [[ 9, "MRR@100 (Eval)" ]]},
+        custom_formatting: [[0, id_format], [3, description_format], [5, paper_link], [6, code_link], [10, tweet_link]]
+      });
+    </script>
+  </body>
+</html>

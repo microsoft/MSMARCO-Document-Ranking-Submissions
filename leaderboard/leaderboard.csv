@@ -1,0 +1,38 @@
+id,date,,description,team,paper,code,type,MRR@100 (Dev),MRR@100 (Eval),tweet
+20200811a,2020/08/11,🏛,"IndriQueryLikelihood","MSMARCO Team",,http://www.lemurproject.org/indri.php,full ranking,,0.192,1293306436399685632
+20200811b,2020/08/11,🏛,"Conformer-Kernel with QTI (NDRM3)","Bhaskar Mitra (Microsoft), Sebastian Hofstätter (TU Wien), Hamed Zamani (Microsoft), and Nick Craswell (Microsoft)",https://arxiv.org/pdf/2007.10434.pdf,https://github.com/bmitra-msft/TREC-Deep-Learning-Quick-Start,reranking,,0.293,1293306436399685632
+20200811c,2020/08/11,🏛,"Conformer-Kernel with QTI (NDRM1)","Bhaskar Mitra (Microsoft), Sebastian Hofstätter (TU Wien), Hamed Zamani (Microsoft), and Nick Craswell (Microsoft)",https://arxiv.org/pdf/2007.10434.pdf,https://github.com/bmitra-msft/TREC-Deep-Learning-Quick-Start,reranking,,0.307,1293306436399685632
+20200816a,2020/08/16,,"Anserini's BM25","Ronak Pradeep, Rodrigo Nogueira, and Jimmy Lin - University of Waterloo",,https://github.com/castorini/docTTTTTquery#ms-marco-document-dataset,full ranking,,0.201,1294992948128489473
+20200816b,2020/08/16,,"Anserini's BM25 + RM3 baseline","Ronak Pradeep, Rodrigo Nogueira, and Jimmy Lin - University of Waterloo",,https://github.com/castorini/docTTTTTquery#ms-marco-document-dataset,full ranking,,0.139,1294992948128489473
+20200816c,2020/08/16,,"Anserini's BM25 baseline, doc2query index","Ronak Pradeep, Rodrigo Nogueira, and Jimmy Lin - University of Waterloo",,https://github.com/castorini/docTTTTTquery#ms-marco-document-dataset,full ranking,,0.251,1294992948128489473
+20200816d,2020/08/16,,"Anserini's BM25 + RM3 baseline, doc2query index","Ronak Pradeep, Rodrigo Nogueira, and Jimmy Lin - University of Waterloo",,https://github.com/castorini/docTTTTTquery#ms-marco-document-dataset,full ranking,,0.161,1294992948128489473
+20200820-bcai-trad,2020/08/20,,"Non-neural fusion of BM25 (multi-field) and IBM Model 1 scores","Leonid Boytsov, Bosch Center for AI",,https://github.com/oaqa/FlexNeuART,full ranking,0.294,0.256,1296584910724104193
+20200827-bcai-bertb,2020/08/27,🏆,"BERT base (FirstP) / traditional IR","Leonid Boytsov, Bosch Center for AI",,https://github.com/oaqa/FlexNeuART,full ranking,0.413,0.368,1299028581532798976
+20200828a,2020/08/28,,"BERT Base FirstP Baseline","OpenMatch - THU-MSR",,https://github.com/thunlp/OpenMatch/blob/master/docs/experiments-msmarco-doc.md,reranking,,0.317,1299362193180426241
+20200830a,2020/08/30,,"Anserini's BM25 baseline, doc2query segmented index","Ronak Pradeep, Ruizhou Xu, Rodrigo Nogueira,  and Jimmy Lin - University of Waterloo",,https://github.com/castorini/docTTTTTquery#ms-marco-document-dataset,full ranking,,0.284,1300444068972036098
+20200831a,2020/08/31,,"BERT-base Rerank Document First Passage","Luyu Gao and Zhuyun Dai - LTI, CMU",,,reranking,,0.338,1300444068972036098
+20200831b,2020/08/31,,"Longformer reranking","Ivan Sekulic (Università della Svizzera italiana), Amir Soleimani (University of Amsterdam), Mohammad Aliannejadi (University of Amsterdam), and Fabio Crestani (Università della Svizzera italiana)",,https://github.com/isekulic/longformer-marco,reranking,,0.305,
+20200831c,2020/08/31,,"PyTerrier framework + DPH Divergence from Randomness model","Craig Macdonald - University of Glasgow Terrier Team",https://arxiv.org/abs/2007.14271,https://github.com/cmacdonald/pyterrier-msmarco-document-leaderboard-runs/blob/master/uogTrBaseDPH.ipynb,full ranking,,0.230,1300850510619123712
+20200903a,2020/09/03,,"uogTrDPHCBmp: PyTerrier DPH reranked by ColBERT MaxPassage","Craig Macdonald - University of Glasgow Terrier Team",,,full ranking,,0.291,1301621369151590405
+20200907-h2oloo-1,2020/09/07,🏆,"Expando-Mono-Duo-T5","Ronak Pradeep, Ruizhou Xu, Rodrigo Nogueira, and Jimmy Lin - University of Waterloo",,,full ranking,0.426,0.370,1303331769358389249
+20200907-h2oloo-2,2020/09/07,,"Expando-Mono-T5","Ronak Pradeep, Ruizhou Xu, Rodrigo Nogueira, and Jimmy Lin - University of Waterloo",,,full ranking,0.411,0.362,
+20200908a,2020/09/08,,"BERT Base FirstP + Document Expansion","OpenMatch - THU-MSR",,https://github.com/thunlp/OpenMatch/blob/master/docs/experiments-msmarco-doc.md,reranking,,0.329,
+20200908b,2020/09/08,,"BERT Base FirstP","OpenMatch - THU-MSR",,https://github.com/thunlp/OpenMatch/blob/master/docs/experiments-msmarco-doc.md,reranking,,0.328,
+20200909-cmu,2020/09/09,🏆,"HDCT top100 + BERT-base FirstP (single)","Luyu Gao and Zhuyun Dai - LTI, CMU",,,full ranking,0.434,0.382,1303695596247752704
+20200910a,2020/09/10,,"Anserini's BM25 + T5QLM Max passage","Shengyao Zhuang, Hang Li, and Guido Zuccon - IELab, The University of Queensland",,,full ranking,,0.290,
+20200901a,2020/09/01,,"PyTerrier framework + DPH + Bo1 QE","Craig Macdonald - University of Glasgow Terrier Team",https://arxiv.org/abs/2007.14271,https://github.com/cmacdonald/pyterrier-msmarco-document-leaderboard-runs/blob/master/uogTrBaseDPHQ.ipynb,full ranking,,0.219,
+20200918a,2020/09/18,,"BERT Base FirstP early stop","OpenMatch - THU-MSR",,https://github.com/thunlp/OpenMatch/blob/master/docs/experiments-msmarco-doc.md,reranking,,0.329,
+20200918b,2020/09/18,,"BERT Base FirstP early stop + url","OpenMatch - THU-MSR",,https://github.com/thunlp/OpenMatch/blob/master/docs/experiments-msmarco-doc.md,reranking,,0.326,
+20200919-h2oloo,2020/09/19,,"expando-mono-duo-T5 FirstP+MaxP","Ronak Pradeep, Ruizhou Xu, Rodrigo Nogueira, and Jimmy Lin - University of Waterloo",,,full ranking,0.432,0.378,
+20200923a,2020/09/23,,"ANCE BERT Base FirstP Fusion","OpenMatch - THU-MSR",,https://github.com/thunlp/OpenMatch/blob/master/docs/experiments-msmarco-doc.md,full ranking,,0.357,
+20200923b,2020/09/23,,"ANCE FirstP","OpenMatch - THU-MSR",https://arxiv.org/pdf/2007.00808.pdf,https://github.com/thunlp/OpenMatch/blob/master/docs/experiments-msmarco-doc.md,full ranking,,0.334,
+20200924a,2020/09/24,,"ME-hybrid","Google Research",,,full ranking,,0.310,
+20200924b,2020/09/24,,"DE-hybrid","Google Research",,,full ranking,,0.287,
+20200924-colbert-1,2020/09/24,,"ColBERT-long end-to-end v0","Omar Khattab, Christopher Potts, and Matei Zaharia - Stanford University",,,full ranking,0.419,0.366,
+20201001-bcai-bertm1-1,2020/10/01,,"BERT-m1 base (v1) / traditional IR + doc2query","Leonid Boytsov, Bosch Center for AI",,https://github.com/oaqa/FlexNeuART,full ranking,0.430,0.380,1311798352569339909
+20201006-colbert-2,2020/10/06,🏆,"ColBERT MaxP end-to-end","Omar Khattab, Christopher Potts, and Matei Zaharia - Stanford University",,,full ranking,0.440,0.384,1313588721862705154
+20201009,2020/10/09,,"ANCE BERT Base FirstP","THU-MSR",,https://github.com/thunlp/OpenMatch/blob/master/docs/experiments-msmarco-doc.md,full ranking,,0.362,
+20201012-bcai-bertm1-2,2020/10/12,🏆,"BERT-m1 base (v2) / traditional IR + doc2query","Leonid Boytsov, Bosch Center for AI",,https://github.com/oaqa/FlexNeuART,full ranking,0.438,0.390,1316064157305888768
+20201016-openmatch-1,2020/10/16,,"ANCE + BM25 BERT Base FirstP","THU-MSR",,https://github.com/thunlp/OpenMatch/blob/master/docs/experiments-msmarco-doc.md,full ranking,0.431,0.380,
+20201020-bcai-bertm1-3,2020/10/20,🏆,"BERT-m1 base (v3) / traditional IR + doc2query","Leonid Boytsov, Bosch Center for AI",,https://github.com/oaqa/FlexNeuART,full ranking,0.441,0.396,1318629005076156417
+20201023-openmatch-3,2020/10/23,,"ANCE MaxP","THU-MSR",https://arxiv.org/pdf/2007.00808.pdf,https://github.com/thunlp/OpenMatch/blob/master/docs/experiments-msmarco-doc.md,full ranking,0.384,0.342,
