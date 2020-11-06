@@ -1,5 +1,47 @@
 # MS MARCO Document Ranking Leaderboard Archive
 
+This is a work-in-progress attempt to revamp the MS MARCO Document Ranking Leaderboard.
+We will "switch over" to this repo at some future point, but until then, [the main MS MARCO site](https://microsoft.github.io/msmarco/) remains the "ground truth".
+
+To make a submission, please follow these instructions:
+
+1. Decide on a submission id, which will be a permanent unique key. The submission id should be of the form `YYYYMMDD-foo`, where `foo` can be a suffix of your choice, e.g., your group's name.
+Please keep the length reasonable.
+See [here](https://github.com/microsoft/MSMARCO-Document-Ranking-Archive/tree/main/submissions) for examples.
+`YYYYMMDD` should correspond to the submission date of your run.
+
+2. Create the directory `submissions/YYYYMMDD-foo/`. This directory should contain three files:
+   1. `submissions/YYYYMMDD-foo/dev.txt.bz2` - run file on the dev queries, bz2-compressed
+   2. `submissions/YYYYMMDD-foo/eval.txt.bz2` - run file on the eval queries, bz2-compressed
+   3. `submissions/YYYYMMDD-foo/metadata.json`, in the following format:
+
+       ```
+        {
+          "team": "team name",
+          "model_description": "model description",
+          "date": "yyyyy/mm/dd",       // submission date
+          "paper": "url",              // URL to paper
+          "code": "url",               // URL to code
+          "type": "full ranking"       // either 'full ranking' or 'reranking'
+        }
+       ```
+
+3. Encrypt the submission:
+   ```bash
+   $ cd submissions
+   $ openssl rand -base64 32 > YYYYMMDD-foo.key.bin
+   $ openssl rsautl -encrypt -inkey ../msmarco_doc_public_key.pem -pubin -in YYYYMMDD-foo.key.bin -out YYYYMMDD-foo.key.bin.enc
+   $ tar cvf YYYYMMDD-foo.tar YYYYMMDD-foo/
+   $ openssl enc -aes-256-cbc -salt -in YYYYMMDD-foo.tar -out YYYYMMDD-foo.tar.enc -pass file:YYYYMMDD-foo.key.bin -pbkdf2
+   ```
+
+4. Open a pull request against this repository.
+The subject (title) of the pull request should be "Submission YYYYMMDD-foo", where `YYYYMMDD-foo` is the submission id you decided on.
+This pull request should contain exactly two files:
+   1. `submissions/YYYYMMDD-foo.key.bin.enc` - the encrypted key
+   2. `submissions/YYYYMMDD-foo.tar.enc` - the encrypted tarball
+
+
 ## Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
