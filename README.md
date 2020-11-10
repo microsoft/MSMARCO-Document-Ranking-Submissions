@@ -13,7 +13,7 @@ See [here](https://github.com/microsoft/MSMARCO-Document-Ranking-Archive/tree/ma
 2. Create the directory `submissions/YYYYMMDD-foo/`. This directory should contain three files:
    1. `submissions/YYYYMMDD-foo/dev.txt.bz2` - run file on the dev queries, bz2-compressed
    2. `submissions/YYYYMMDD-foo/eval.txt.bz2` - run file on the eval queries, bz2-compressed
-   3. `submissions/YYYYMMDD-foo/metadata.json`, in the following format:
+   3. `submissions/YYYYMMDD-foo-metadata.json`, in the following format:
 
        ```
         {
@@ -33,6 +33,7 @@ See [here](https://github.com/microsoft/MSMARCO-Document-Ranking-Archive/tree/ma
    $ openssl rsautl -encrypt -inkey ../msmarco_doc_public_key.pem -pubin -in YYYYMMDD-foo.key.bin -out YYYYMMDD-foo.key.bin.enc
    $ tar cvf YYYYMMDD-foo.tar YYYYMMDD-foo/
    $ openssl enc -aes-256-cbc -salt -in YYYYMMDD-foo.tar -out YYYYMMDD-foo.tar.enc -pass file:YYYYMMDD-foo.key.bin -pbkdf2
+   $ openssl enc -aes-256-cbc -salt -in YYYYMMDD-foo-metadata.json -out YYYYMMDD-foo-metadata.json.enc -pass file:YYYYMMDD-foo.key.bin -pbkdf2
    ```
 
 4. Open a pull request against this repository.
@@ -40,7 +41,7 @@ The subject (title) of the pull request should be "Submission YYYYMMDD-foo", whe
 This pull request should contain exactly two files:
    1. `submissions/YYYYMMDD-foo.key.bin.enc` - the encrypted key
    2. `submissions/YYYYMMDD-foo.tar.enc` - the encrypted tarball
-
+   3. `submissions/YYYYMMDD-foo-metadata.json.enc` - the encrypted metadata
 
 ## Contributing
 
