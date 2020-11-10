@@ -8,3 +8,6 @@ eval/msmarco-docdev-qrels.tsv.gz
 dev.txt
 eval.txt
 msmarco_doc_private_key.pem
+submissions/*.tar
+submissions/*.json
+submissions/*.bin

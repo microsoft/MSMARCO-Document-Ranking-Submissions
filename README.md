@@ -28,14 +28,19 @@ See [here](https://github.com/microsoft/MSMARCO-Document-Ranking-Archive/tree/ma
         }
        ```
 
-3. Package (i.e., encrypt) the submission using the following script:
+3. Run our evaluation script to make sure everything is in order (and fix any errors):
+   ```bash
+   $ python eval/run_eval.py --id YYYYMMDD-foo
+   ```
+
+4. Package (i.e., encrypt) the submission using the following script:
    ```bash
    $ eval/pack.sh YYYYMMDD-foo
    ```
 
-4. Open a pull request against this repository.
+5. Open a pull request against this repository.
 The subject (title) of the pull request should be "Submission YYYYMMDD-foo", where `YYYYMMDD-foo` is the submission id you decided on.
-This pull request should contain exactly two files:
+This pull request should contain exactly three files:
    1. `submissions/YYYYMMDD-foo.key.bin.enc` - the encrypted key
    2. `submissions/YYYYMMDD-foo.tar.enc` - the encrypted tarball
    3. `submissions/YYYYMMDD-foo-metadata.json.enc` - the encrypted metadata
