@@ -7,3 +7,4 @@ eval/msmarco-docdev-qrels.tsv
 eval/msmarco-docdev-qrels.tsv.gz
 dev.txt
 eval.txt
+msmarco_doc_private_key.pem

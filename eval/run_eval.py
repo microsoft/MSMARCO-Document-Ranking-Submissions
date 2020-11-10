@@ -34,7 +34,11 @@ def main(args):
     id = args.id
     base_dir = os.path.join('.', 'submissions', id)
 
-    print(f'Processing submission {id}')
+    print(f'# Processing submission {id}\n')
+
+    output = subprocess.check_output(f'eval/unpack.sh {id}', shell=True).decode('utf-8')
+    print(output)
+
     print(f'Submission directory {base_dir}')
 
     assert os.path.exists(base_dir), f'Error: {base_dir} does not exist!'
@@ -43,7 +47,7 @@ def main(args):
 
     dev_run = os.path.join(base_dir, 'dev.txt.bz2')
     test_run = os.path.join(base_dir, 'eval.txt.bz2')
-    metadata_file = os.path.join(base_dir, 'metadata.json')
+    metadata_file = base_dir + '-metadata.json'
 
     for f in [dev_run, test_run, metadata_file]:
         assert os.path.exists(f), f'Error: {f} does not exist!'
