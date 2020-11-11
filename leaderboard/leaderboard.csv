@@ -38,3 +38,4 @@ id,date,,description,team,paper,code,type,MRR@100 (Dev),MRR@100 (Eval),tweet
 20201023-openmatch-3,2020/10/23,,"ANCE MaxP","THU-MSR",https://arxiv.org/pdf/2007.00808.pdf,https://github.com/thunlp/OpenMatch/blob/master/docs/experiments-msmarco-doc.md,full ranking,0.384,0.342,
 20201027-bcai,2020/10/27,🏆,"BERT-m1 base + classic IR + doc2query (ensemble)","Leonid Boytsov, Bosch Center for AI",,https://github.com/oaqa/FlexNeuART,full ranking,,0.398,
 20201028-ict,2020/10/28,,"Bert-ranker (our implementation) ICT","ICT",,,full ranking,,0.349,
+20201110-ance-d,2020/11/10,,"Anonymous","Anonymous",,,full ranking,0.383,0.131,
