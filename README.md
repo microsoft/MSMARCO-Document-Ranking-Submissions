@@ -3,6 +3,8 @@
 This is a work-in-progress attempt to revamp the MS MARCO Document Ranking Leaderboard.
 We will "switch over" to this repo at some future point, but until then, [the main MS MARCO site](https://microsoft.github.io/msmarco/) remains the "ground truth".
 
+## Submission Instructions
+
 To make a submission, please follow these instructions:
 
 1. Decide on a submission id, which will be a permanent unique key. The submission id should be of the form `YYYYMMDD-foo`, where `foo` can be a suffix of your choice, e.g., your group's name.
@@ -26,19 +28,19 @@ See [here](https://github.com/microsoft/MSMARCO-Document-Ranking-Archive/tree/ma
         }
        ```
 
-3. Encrypt the submission:
+3. Run our evaluation script to make sure everything is in order (and fix any errors):
    ```bash
-   $ cd submissions
-   $ openssl rand -base64 32 > YYYYMMDD-foo.key.bin
-   $ openssl rsautl -encrypt -inkey ../msmarco_doc_public_key.pem -pubin -in YYYYMMDD-foo.key.bin -out YYYYMMDD-foo.key.bin.enc
-   $ tar cvf YYYYMMDD-foo.tar YYYYMMDD-foo/
-   $ openssl enc -aes-256-cbc -salt -in YYYYMMDD-foo.tar -out YYYYMMDD-foo.tar.enc -pass file:YYYYMMDD-foo.key.bin -pbkdf2
-   $ openssl enc -aes-256-cbc -salt -in YYYYMMDD-foo-metadata.json -out YYYYMMDD-foo-metadata.json.enc -pass file:YYYYMMDD-foo.key.bin -pbkdf2
+   $ python eval/run_eval.py --id YYYYMMDD-foo
    ```
 
-4. Open a pull request against this repository.
+4. Package (i.e., encrypt) the submission using the following script:
+   ```bash
+   $ eval/pack.sh YYYYMMDD-foo
+   ```
+
+5. Open a pull request against this repository.
 The subject (title) of the pull request should be "Submission YYYYMMDD-foo", where `YYYYMMDD-foo` is the submission id you decided on.
-This pull request should contain exactly two files:
+This pull request should contain exactly three files:
    1. `submissions/YYYYMMDD-foo.key.bin.enc` - the encrypted key
    2. `submissions/YYYYMMDD-foo.tar.enc` - the encrypted tarball
    3. `submissions/YYYYMMDD-foo-metadata.json.enc` - the encrypted metadata

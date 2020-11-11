@@ -105,7 +105,16 @@
         element: "table-container", 
         allow_download: false,
         csv_options: {separator: ',', delimiter: '"'},
-        datatables_options: {"paging": false, "order": [[ 9, "MRR@100 (Eval)" ]]},
+        datatables_options: {
+         "paging": false,
+         "order": [[ 9, "MRR@100 (Eval)" ]],
+         "columnDefs": [
+          {
+            "targets": [ 0 ],
+             "visible": false,
+             "searchable": false
+          }]
+        },
         custom_formatting: [[0, id_format], [3, description_format], [5, paper_link], [6, code_link], [10, tweet_link]]
       });
     </script>
