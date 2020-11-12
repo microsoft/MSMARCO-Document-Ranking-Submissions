@@ -46,10 +46,35 @@ This pull request should contain exactly three files:
    2. `submissions/yyyymmdd-foo.tar.enc` - the encrypted tarball
    3. `submissions/yyyymmdd-foo-metadata.json.enc` - the encrypted metadata
 
+## Additional Submission Guidelines
+The goal of the MS MARCO leaderboard is to encourage coopetition (cooperation + competition) among various groups working on deep learning and other methods for search that requires or benefits from large scale training data.
+So, while we encourage friendly competition between different participating groups for top positions on the leaderboard, our core motivation is to ensure that over time the leaderboard provides meaningful scientific insights about how different methods compare to each other and answer questions like whether we are making real progress as a research community.
+All participants are requested to abide by this spirit of coopetition and strictly observe good scientific principles when participating.
+We will follow an honour system and expect participants to ensure that they are acting in compliance with both the policies and the spirit of this leaderboard.
+We will also periodically audit all submissions ourselves and may flag issues as appropriate. 
+
+### Frequency of Submission
+The eval set is meant to be a blind set.
+We want to discourage modeling decisions based eval numbers to avoid overfitting to the set.
+To ensure this, we request participants to NOT submit:
+
+1. More than 2 runs per month.
+2. More than 1 run with very small changes, such as different random seeds or different hyper-parameters (e.g., small changes in number of layers or number of training epochs).
+
+Participants who may want to run ablation studies on their models are encouraged to do so on the dev set, but not on the eval set.
+
+### Metadata Updates
+
+The metadata you provide during run submission, is meant to be final.
+However, we do allow restricted updates to the metadata JSON file, for example, if you wish to associate your submission with a paper or a code repository.
+Note, however, that both team/model descriptions and the submitted runs themselves are immutable and cannot be altered once they are submitted.
+We would of course try to accomodate reasonable exceptions to this rule, e.g., fixing a typo in the team name.
+To update your metadata, simply send a pull request with an updated metadata JSON file, encrypted with the same key.
+
 ### Anonymous Submissions
 
 We allow anonymous submissions.
-Note that the purpose of an anonymous submission is to support blind reviewing, not as a probing mechanism to see how well you do, and then only make your identity known if you do well.
+Note that the purpose of an anonymous submission is to support blind reviewing for corresponding publications, not as a probing mechanism to see how well you do, and then only make your identity known if you do well.
 
 Anonymous submissions should still contain accurate team and model information in the metadata JSON file, but on the leaderboard we will anonymize your entry.
 By default, we allow an embargo period of anonymous submissions for up to nine months.
@@ -70,11 +95,6 @@ Note that even with an anonymous submission, the submission id is publicly known
 You might consider using a random string as the submission id, and you might consider creating a separate GitHub account for the sole purpose of submitting an anonymous run.
 Neither is necessary; we only provide this information for your reference.
 
-### Metadata Updates
-
-We allow updates to the metadata JSON file, for example, if you wish to associate your submission with a paper or a code repository.
-Note, however, that the submissions themselves are immutable and cannot be altered once they are submitted.
-To update your metadata, simply send a pull request with an updated metadata JSON file, encrypted with the same key.
 
 ## Contributing
 
