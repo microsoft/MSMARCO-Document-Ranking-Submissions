@@ -56,10 +56,10 @@ We will also periodically audit all submissions ourselves and may flag issues as
 ### Frequency of Submission
 The eval set is meant to be a blind set.
 We want to discourage modeling decisions based eval numbers to avoid overfitting to the set.
-To ensure this, we request participants to NOT submit:
+To ensure this, we request participants to submit:
 
-1. More than 2 runs per month.
-2. More than 1 run with very small changes, such as different random seeds or different hyper-parameters (e.g., small changes in number of layers or number of training epochs).
+1. No more than 2 runs in any given period of 30 days.
+2. No more than 1 run with very small changes, such as different random seeds or different hyper-parameters (e.g., small changes in number of layers or number of training epochs).
 
 Participants who may want to run ablation studies on their models are encouraged to do so on the dev set, but not on the eval set.
 
