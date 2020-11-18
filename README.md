@@ -12,7 +12,7 @@ Please keep the length reasonable.
 See [here](https://github.com/microsoft/MSMARCO-Document-Ranking-Archive/tree/main/submissions) for examples.
 `yyyymmdd` should correspond to the submission date of your run.
 
-2. Create the directory `submissions/yyyymmdd-foo/`. This directory should contain three files:
+2. In the directory `submissions/`, create the following files:
    1. `submissions/yyyymmdd-foo/dev.txt.bz2` - run file on the dev queries (`msmarco-docdev-queries.tsv`), bz2-compressed
    2. `submissions/yyyymmdd-foo/eval.txt.bz2` - run file on the eval queries (`docleaderboard-queries.tsv`), bz2-compressed
    3. `submissions/yyyymmdd-foo-metadata.json`, in the following format:
