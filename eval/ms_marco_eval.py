@@ -16,6 +16,21 @@ from collections import Counter
 
 MaxMRRRank = 100
 
+def autoopen(filename, mode="rt"):
+    """
+    A drop-in for open() that applies automatic compression for .gz and .bz2 file extensions
+    """
+    if not 't' in mode and not 'b' in mode:
+       mode=mode+'t'
+    if filename.endswith(".gz"):
+        import gzip
+        return gzip.open(filename, mode)
+    elif filename.endswith(".bz2"):
+        import bz2
+        return bz2.open(filename, mode)
+    return open(filename, mode)
+
+
 def load_reference_from_stream(f):
     """Load Reference reference relevant document
     Args:f (stream): stream to load.
@@ -40,7 +55,7 @@ def load_reference(path_to_reference):
     Args:path_to_reference (str): path to a file to load.
     Returns:qids_to_relevant_documentids (dict): dictionary mapping from query_id (int) to relevant documents (list of ints). 
     """
-    with open(path_to_reference,'r') as f:
+    with autoopen(path_to_reference,'r') as f:
         qids_to_relevant_documentids = load_reference_from_stream(f)
     return qids_to_relevant_documentids
 
@@ -78,7 +93,7 @@ def load_candidate(path_to_candidate):
     Returns:qid_to_ranked_candidate_documents (dict): dictionary mapping from query_id (int) to a list of 1000 document ids(int) ranked by relevance and importance
     """
     
-    with open(path_to_candidate,'r') as f:
+    with autoopen(path_to_candidate,'r') as f:
         qid_to_ranked_candidate_documents = load_candidate_from_stream(f)
     return qid_to_ranked_candidate_documents
 
@@ -180,7 +195,7 @@ def load_exclude(path_to_exclude_folder):
     # List all files in a directory using os.listdir
     for a_file in os.listdir(path_to_exclude_folder):
         if os.path.isfile(os.path.join(path_to_exclude_folder, a_file)):
-            with open(os.path.join(path_to_exclude_folder, a_file), 'r') as f:
+            with autoopen(os.path.join(path_to_exclude_folder, a_file), 'r') as f:
                 f.readline() #header
                 for l in f:
                     qids.add(int(l.split('\t')[0]))
