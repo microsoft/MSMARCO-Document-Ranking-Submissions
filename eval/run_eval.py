@@ -10,6 +10,21 @@ import subprocess
 from urllib.request import urlretrieve
 
 
+def autoopen(filename, mode="rt"):
+    """
+    A drop-in for open() that applies automatic compression for .gz and .bz2 file extensions
+    """
+    if not 't' in mode and not 'b' in mode:
+       mode=mode+'t'
+    if filename.endswith(".gz"):
+        import gzip
+        return gzip.open(filename, mode)
+    elif filename.endswith(".bz2"):
+        import bz2
+        return bz2.open(filename, mode)
+    return open(filename, mode)
+
+
 def evaluate_run_with_qrels(run, qrels, exclude=False):
     if exclude:
         output = subprocess.check_output(
@@ -23,11 +38,18 @@ def evaluate_run_with_qrels(run, qrels, exclude=False):
     return m.group(1)
 
 
-def file_len(fname):
-    with open(fname) as f:
+def sanity_check_run(file):
+    print(f'Sanity checking run {file}')
+    qids = set()
+    with bz2.open(file, 'rt') as f:
         for i, l in enumerate(f):
-            pass
-    return i + 1
+            qids.add(l.split('\t')[0])
+    line_cnt = i + 1
+    num_queries = len(qids)
+    print(f'Run has {line_cnt} lines, {num_queries} unique queries.')
+    if line_cnt != num_queries * 100:
+        print(f'Warning, {num_queries * 100} lines expected (100 hits per query), instead {line_cnt} lines found!')
+    print('')
 
 
 def main(args):
@@ -36,8 +58,12 @@ def main(args):
 
     print(f'# Processing submission {id}\n')
 
-    output = subprocess.check_output(f'eval/unpack.sh {id}', shell=True).decode('utf-8')
-    print(output)
+    if os.path.exists('msmarco_doc_private_key.pem'):
+        print('Private key found!')
+        output = subprocess.check_output(f'eval/unpack.sh {id}', shell=True).decode('utf-8')
+        print(output)
+    else:
+        print('Private key not found, assuming unencrypted files exists...\n')
 
     print(f'Submission directory {base_dir}')
 
@@ -54,16 +80,10 @@ def main(args):
 
     print('Verified: expected files appear in the submission directory!\n')
 
-    # Uncompress the dev run and the test run
-    for filepath in [dev_run, test_run]:
-        newfilepath = filepath[:-4]
-        print(f'Decompressing {filepath} to {newfilepath}')
-        with open(newfilepath, 'wb') as new_file, bz2.BZ2File(filepath, 'rb') as file:
-            for data in iter(lambda: file.read(100 * 1024), b''):
-                new_file.write(data)
-        print(f'Number of lines in {newfilepath}: ' + str(file_len(newfilepath)))
+    sanity_check_run(dev_run)
+    sanity_check_run(test_run)
 
-    print('\nProceeding to evaluate: \n')
+    print('Proceeding to evaluate:\n')
 
     # Evaluate dev run
     if not os.path.exists(os.path.join('eval', 'msmarco-docdev-qrels.tsv')):
@@ -96,18 +116,34 @@ def main(args):
         metadata = json.load(f)
 
     if args.generate_csv:
+        match = re.search(r'(\d\d\d\d)(\d\d)(\d\d)-', id)
+        year = match.group(1)
+        month = match.group(2)
+        day = match.group(3)
+
+        if 'embargo_until' in metadata.keys():
+            model_description = '"Anonymous"'
+            team = '"Anonymous"'
+            paper = ''
+            code = ''
+        else:
+            model_description = '"' + metadata['model_description'].replace('"', '\\"') + '"'
+            team = '"' + metadata['team'].replace('"', '\\"') + '"'
+            paper = metadata['paper']
+            code = metadata['code']
+
         leaderboard_entry = [id,
-                             metadata['date'],
+                             f'{year}/{month}/{day}',
                              '',  # this is where the emojis go
-                             '"' + metadata['model_description'].replace('"', '\\"') + '"',
-                             '"' + metadata['team'].replace('"', '\\"') + '"',
-                             metadata['paper'],
-                             metadata['code'],
+                             model_description,
+                             team,
+                             paper,
+                             code,
                              metadata['type'],
                              str(round(float(dev_run_mrr), 3)),
                              str(round(float(test_run_mrr), 3)),
                              ''            # This is the tweetid field, leaving empty for now
-                            ]
+                             ]
 
         print('\n\n############')
         print(','.join(leaderboard_entry))
