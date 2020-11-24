@@ -21,7 +21,6 @@ See [here](https://github.com/microsoft/MSMARCO-Document-Ranking-Archive/tree/ma
         {
           "team": "team name",
           "model_description": "model description",
-          "date": "yyyyy/mm/dd",       // submission date
           "paper": "url",              // URL to paper
           "code": "url",               // URL to code
           "type": "full ranking"       // either 'full ranking' or 'reranking'
