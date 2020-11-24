@@ -39,3 +39,6 @@ id,date,,description,team,paper,code,type,MRR@100 (Dev),MRR@100 (Eval),tweet
 20201027-bcai,2020/10/27,🏆,"BERT-m1 base + classic IR + doc2query (ensemble)","Leonid Boytsov, Bosch Center for AI",,https://github.com/oaqa/FlexNeuART,full ranking,,0.398,
 20201028-ict,2020/10/28,,"Bert-ranker (our implementation) ICT","ICT",,,full ranking,,0.349,
 20201110-ance-d,2020/11/10,,"Anonymous","Anonymous",,,full ranking,0.383,0.131,
+20201113-openmatch-4,2020/11/13,,"ANCE + BERT Base MaxP","THU-MSR",,https://github.com/thunlp/OpenMatch/blob/master/docs/experiments-msmarco-doc.md,full ranking,0.432,0.391,
+20201118-uogTrDPHSS,2020/11/18,,"PyTerrier framework + DPH Divergence from Randomness model, with stemming","University of Glasgow Terrier Team",https://arxiv.org/abs/2007.14271,https://github.com/cmacdonald/pyterrier-msmarco-document-leaderboard-runs/blob/master/uogTrBaseDPHSS.ipynb,full ranking,0.273,0.238,
+20201120-ance-d-1,2020/11/20,,"Anonymous","Anonymous",,,full ranking,0.383,0.337,
