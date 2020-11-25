@@ -42,3 +42,4 @@ id,date,,description,team,paper,code,type,MRR@100 (Dev),MRR@100 (Eval),tweet
 20201113-openmatch-4,2020/11/13,,"ANCE + BERT Base MaxP","THU-MSR",,https://github.com/thunlp/OpenMatch/blob/master/docs/experiments-msmarco-doc.md,full ranking,0.432,0.391,
 20201118-uogTrDPHSS,2020/11/18,,"PyTerrier framework + DPH Divergence from Randomness model, with stemming","University of Glasgow Terrier Team",https://arxiv.org/abs/2007.14271,https://github.com/cmacdonald/pyterrier-msmarco-document-leaderboard-runs/blob/master/uogTrBaseDPHSS.ipynb,full ranking,0.273,0.238,
 20201120-ance-d-1,2020/11/20,,"Anonymous","Anonymous",,,full ranking,0.383,0.337,
+20201125-elastic-optimized_best_fields,2020/11/25,,"Elasticsearch optimized multi_match best_fields","Josh Devins - Elastic",https://www.elastic.co/blog/,https://github.com/elastic/examples/tree/master/Machine%20Learning/Query%20Optimization/,full ranking,0.308,0.268,
