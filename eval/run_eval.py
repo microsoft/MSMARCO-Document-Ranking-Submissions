@@ -97,16 +97,14 @@ def main(args):
             with open(dev_qrels_uncompressed, 'wb') as f_out:
                 shutil.copyfileobj(f_in, f_out)
 
-    dev_run_uncompressed = dev_run[:-4]  # Strip the .bz2 suffix
-    dev_run_mrr = evaluate_run_with_qrels(dev_run_uncompressed, 'msmarco-docdev-qrels.tsv')
+    dev_run_mrr = evaluate_run_with_qrels(dev_run, 'msmarco-docdev-qrels.tsv')
 
     print(f'Dev run MRR@100: {dev_run_mrr}')
 
     # Evaluate test run
 
     if os.path.exists('eval/docleaderboard-qrels.tsv'):
-        test_run_uncompressed = test_run[:-4]  # Strip the .bz2 suffix
-        test_run_mrr = evaluate_run_with_qrels(test_run_uncompressed, 'docleaderboard-qrels.tsv', exclude=True)
+        test_run_mrr = evaluate_run_with_qrels(test_run, 'docleaderboard-qrels.tsv', exclude=True)
         print(f'Eval run MRR@100: {test_run_mrr}')
     else:
         print('Test qrels not available, skipping evaluation.')
