@@ -36,7 +36,7 @@ id,date,,description,team,paper,code,type,MRR@100 (Dev),MRR@100 (Eval),tweet
 20201016-openmatch-1,2020/10/16,,"ANCE + BM25 BERT Base FirstP","THU-MSR",,https://github.com/thunlp/OpenMatch/blob/master/docs/experiments-msmarco-doc.md,full ranking,0.431,0.380,
 20201020-bcai-bertm1-3,2020/10/20,🏆,"BERT-m1 base (v3) / traditional IR + doc2query","Leonid Boytsov, Bosch Center for AI",,https://github.com/oaqa/FlexNeuART,full ranking,0.441,0.396,1318629005076156417
 20201023-openmatch-3,2020/10/23,,"ANCE MaxP","THU-MSR",https://arxiv.org/pdf/2007.00808.pdf,https://github.com/thunlp/OpenMatch/blob/master/docs/experiments-msmarco-doc.md,full ranking,0.384,0.342,
-20201027-bcai,2020/10/27,🏆,"BERT-m1 base + classic IR + doc2query (ensemble)","Leonid Boytsov, Bosch Center for AI",,https://github.com/oaqa/FlexNeuART,full ranking,,0.398,
+20201027-bcai-bertm1-ensmbl,2020/10/27,🏆,"BERT-m1 base + classic IR + doc2query (ensemble)","Leonid Boytsov, Bosch Center for AI",https://arxiv.org/abs/2010.14848,https://github.com/oaqa/FlexNeuART,full ranking,0.449,0.398,
 20201028-ict,2020/10/28,,"Bert-ranker (our implementation) ICT","ICT",,,full ranking,,0.349,
 20201110-ance-d,2020/11/10,,"Anonymous","Anonymous",,,full ranking,0.383,0.131,
 20201113-openmatch-4,2020/11/13,,"ANCE + BERT Base MaxP","THU-MSR",,https://github.com/thunlp/OpenMatch/blob/master/docs/experiments-msmarco-doc.md,full ranking,0.432,0.391,
