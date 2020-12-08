@@ -45,3 +45,4 @@ id,date,,description,team,paper,code,type,MRR@100 (Dev),MRR@100 (Eval),tweet
 20201125-elastic-optimized_best_fields,2020/11/25,,"Elasticsearch optimized multi_match best_fields","Josh Devins - Elastic",https://www.elastic.co/blog/improving-search-relevance-with-data-driven-query-optimization,https://github.com/elastic/examples/tree/master/Machine%20Learning/Query%20Optimization/,full ranking,0.308,0.268,
 20201129-clbert,2020/11/29,,"Anonymous","Anonymous",,,full ranking,0.392,0.347,
 20201206-bcai-trad-2,2020/12/06,,"Non-neural fusion of BM25 (multi-field) and IBM Model 1 scores (v2)","Leonid Boytsov, Bosch Center for AI",https://arxiv.org/abs/2010.14848,https://github.com/oaqa/FlexNeuART,full ranking,0.338,0.298,
+20201207-ffbm25,2020/12/07,,"Multi-Field Weighted Fusion (PISA BM25 + Polyfuse MinMax CombSUM)","Joel Mackenzie (UniMelb)",,,full ranking,0.31,0.271,
