@@ -28,10 +28,10 @@ def autoopen(filename, mode="rt"):
 def evaluate_run_with_qrels(run, qrels, exclude=False):
     if exclude:
         output = subprocess.check_output(
-            f'python eval/ms_marco_eval.py {run} eval/{qrels} exclude/', shell=True).decode('utf-8')
+            f'python3 eval/ms_marco_eval.py {run} eval/{qrels} exclude/', shell=True).decode('utf-8')
     else:
         output = subprocess.check_output(
-            f'python eval/ms_marco_eval.py {run} eval/{qrels}', shell=True).decode('utf-8')
+            f'python3 eval/ms_marco_eval.py {run} eval/{qrels}', shell=True).decode('utf-8')
 
     # print(f'\n\n{output}\n\n')
     m = re.compile('MRR @100: ([0-9.]+)').search(output)
