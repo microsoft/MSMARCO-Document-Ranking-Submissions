@@ -46,4 +46,5 @@ id,date,,description,team,paper,code,type,MRR@100 (Dev),MRR@100 (Eval),tweet
 20201129-clbert,2020/11/29,,"Anonymous","Anonymous",,,full ranking,0.392,0.347,
 20201206-bcai-trad-2,2020/12/06,,"Non-neural fusion of BM25 (multi-field) and IBM Model 1 scores (v2)","Leonid Boytsov, Bosch Center for AI",https://arxiv.org/abs/2010.14848,https://github.com/oaqa/FlexNeuART,full ranking,0.338,0.298,
 20201207-ffbm25,2020/12/07,,"Multi-Field Weighted Fusion (PISA BM25 + Polyfuse MinMax CombSUM)","Joel Mackenzie (UniMelb)",,,full ranking,0.310,0.271,
-20200816-h2oloo-bm25base,2020/08/16,,"Anserini's BM25, default parameters (k1=0.9, b=0.4)","Ronak Pradeep, Rodrigo Nogueira, and Jimmy Lin - University of Waterloo",,http://anserini.io/,full ranking,0.23,0.201,
+20200816-h2oloo-bm25base,2020/08/16,,"Anserini's BM25, default parameters (k1=0.9, b=0.4)","Ronak Pradeep, Rodrigo Nogueira, and Jimmy Lin - University of Waterloo",,http://anserini.io/,full ranking,0.230,0.201,
+20201211-h2oloo-a,2020/12/11,,"Anserini's BM25 + doc2query-T5 expansion (per document), parameters tuned for recall@100 (k1=4.68, b=0.87)","Ronak Pradeep, Ruizhou Xu, Rodrigo Nogueira, and Jimmy Lin - University of Waterloo",,http://anserini.io/,full ranking,0.327,0.291,
