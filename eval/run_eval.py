@@ -138,8 +138,8 @@ def main(args):
                              paper,
                              code,
                              metadata['type'],
-                             str(round(float(dev_run_mrr), 3)),
-                             str(round(float(test_run_mrr), 3)),
+                             f'{round(float(dev_run_mrr), 3):.3f}',
+                             f'{round(float(test_run_mrr), 3):.3f}',
                              ''            # This is the tweetid field, leaving empty for now
                              ]
 
