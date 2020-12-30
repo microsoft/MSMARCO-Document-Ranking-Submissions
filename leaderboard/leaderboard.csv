@@ -18,7 +18,7 @@ id,date,,description,team,paper,code,type,MRR@100 (Dev),MRR@100 (Eval),tweet
 20200908a,2020/09/08,,"BERT Base FirstP + Document Expansion","OpenMatch - THU-MSR",,https://github.com/thunlp/OpenMatch/blob/master/docs/experiments-msmarco-doc.md,reranking,,0.329,
 20200908b,2020/09/08,,"BERT Base FirstP","OpenMatch - THU-MSR",,https://github.com/thunlp/OpenMatch/blob/master/docs/experiments-msmarco-doc.md,reranking,,0.328,
 20200909-cmu,2020/09/09,🏆,"HDCT top100 + BERT-base FirstP (single)","Luyu Gao and Zhuyun Dai - LTI, CMU",,,full ranking,0.434,0.382,1303695596247752704
-20200910a,2020/09/10,,"Anserini's BM25 + T5QLM Max passage","Shengyao Zhuang, Hang Li, and Guido Zuccon - IELab, The University of Queensland",,,full ranking,,0.290,
+20200910-ielab,2020/09/10,,"Anserini's BM25 + T5QLM Max passage","Shengyao Zhuang, Hang Li, and Guido Zuccon - IELab, The University of Queensland",,,full ranking,0.328,0.290,
 20200901a,2020/09/01,,"PyTerrier framework + DPH + Bo1 QE","Craig Macdonald - University of Glasgow Terrier Team",https://arxiv.org/abs/2007.14271,https://github.com/cmacdonald/pyterrier-msmarco-document-leaderboard-runs/blob/master/uogTrBaseDPHQ.ipynb,full ranking,,0.219,
 20200918a,2020/09/18,,"BERT Base FirstP early stop","OpenMatch - THU-MSR",,https://github.com/thunlp/OpenMatch/blob/master/docs/experiments-msmarco-doc.md,reranking,,0.329,
 20200918b,2020/09/18,,"BERT Base FirstP early stop + url","OpenMatch - THU-MSR",,https://github.com/thunlp/OpenMatch/blob/master/docs/experiments-msmarco-doc.md,reranking,,0.326,
