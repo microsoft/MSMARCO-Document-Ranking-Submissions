@@ -28,10 +28,10 @@ def autoopen(filename, mode="rt"):
 def evaluate_run_with_qrels(run, qrels, exclude=False):
     if exclude:
         output = subprocess.check_output(
-            f'python eval/ms_marco_eval.py {run} eval/{qrels} exclude/', shell=True).decode('utf-8')
+            f'python eval/ms_marco_doc_eval.py --run {run} --judgments eval/{qrels} --exclude exclude/', shell=True).decode('utf-8')
     else:
         output = subprocess.check_output(
-            f'python eval/ms_marco_eval.py {run} eval/{qrels}', shell=True).decode('utf-8')
+            f'python eval/ms_marco_doc_eval.py --run {run} --judgments eval/{qrels}', shell=True).decode('utf-8')
 
     # print(f'\n\n{output}\n\n')
     m = re.compile('MRR @100: ([0-9.]+)').search(output)
@@ -138,8 +138,8 @@ def main(args):
                              paper,
                              code,
                              metadata['type'],
-                             str(round(float(dev_run_mrr), 3)),
-                             str(round(float(test_run_mrr), 3)),
+                             f'{round(float(dev_run_mrr), 3):.3f}',
+                             f'{round(float(test_run_mrr), 3):.3f}',
                              ''            # This is the tweetid field, leaving empty for now
                              ]
 

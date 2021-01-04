@@ -2,7 +2,6 @@ id,date,,description,team,paper,code,type,MRR@100 (Dev),MRR@100 (Eval),tweet
 20200811a,2020/08/11,🏛,"IndriQueryLikelihood","MSMARCO Team",,http://www.lemurproject.org/indri.php,full ranking,,0.192,1293306436399685632
 20200811b,2020/08/11,🏛,"Conformer-Kernel with QTI (NDRM3)","Bhaskar Mitra (Microsoft), Sebastian Hofstätter (TU Wien), Hamed Zamani (Microsoft), and Nick Craswell (Microsoft)",https://arxiv.org/pdf/2007.10434.pdf,https://github.com/bmitra-msft/TREC-Deep-Learning-Quick-Start,reranking,,0.293,1293306436399685632
 20200811c,2020/08/11,🏛,"Conformer-Kernel with QTI (NDRM1)","Bhaskar Mitra (Microsoft), Sebastian Hofstätter (TU Wien), Hamed Zamani (Microsoft), and Nick Craswell (Microsoft)",https://arxiv.org/pdf/2007.10434.pdf,https://github.com/bmitra-msft/TREC-Deep-Learning-Quick-Start,reranking,,0.307,1293306436399685632
-20200816a,2020/08/16,,"Anserini's BM25","Ronak Pradeep, Rodrigo Nogueira, and Jimmy Lin - University of Waterloo",,https://github.com/castorini/docTTTTTquery#ms-marco-document-dataset,full ranking,,0.201,1294992948128489473
 20200816b,2020/08/16,,"Anserini's BM25 + RM3 baseline","Ronak Pradeep, Rodrigo Nogueira, and Jimmy Lin - University of Waterloo",,https://github.com/castorini/docTTTTTquery#ms-marco-document-dataset,full ranking,,0.139,1294992948128489473
 20200816c,2020/08/16,,"Anserini's BM25 baseline, doc2query index","Ronak Pradeep, Rodrigo Nogueira, and Jimmy Lin - University of Waterloo",,https://github.com/castorini/docTTTTTquery#ms-marco-document-dataset,full ranking,,0.251,1294992948128489473
 20200816d,2020/08/16,,"Anserini's BM25 + RM3 baseline, doc2query index","Ronak Pradeep, Rodrigo Nogueira, and Jimmy Lin - University of Waterloo",,https://github.com/castorini/docTTTTTquery#ms-marco-document-dataset,full ranking,,0.161,1294992948128489473
@@ -19,7 +18,7 @@ id,date,,description,team,paper,code,type,MRR@100 (Dev),MRR@100 (Eval),tweet
 20200908a,2020/09/08,,"BERT Base FirstP + Document Expansion","OpenMatch - THU-MSR",,https://github.com/thunlp/OpenMatch/blob/master/docs/experiments-msmarco-doc.md,reranking,,0.329,
 20200908b,2020/09/08,,"BERT Base FirstP","OpenMatch - THU-MSR",,https://github.com/thunlp/OpenMatch/blob/master/docs/experiments-msmarco-doc.md,reranking,,0.328,
 20200909-cmu,2020/09/09,🏆,"HDCT top100 + BERT-base FirstP (single)","Luyu Gao and Zhuyun Dai - LTI, CMU",,,full ranking,0.434,0.382,1303695596247752704
-20200910a,2020/09/10,,"Anserini's BM25 + T5QLM Max passage","Shengyao Zhuang, Hang Li, and Guido Zuccon - IELab, The University of Queensland",,,full ranking,,0.290,
+20200910-ielab,2020/09/10,,"Anserini's BM25 + T5QLM Max passage","Shengyao Zhuang, Hang Li, and Guido Zuccon - IELab, The University of Queensland",,,full ranking,0.328,0.290,
 20200901a,2020/09/01,,"PyTerrier framework + DPH + Bo1 QE","Craig Macdonald - University of Glasgow Terrier Team",https://arxiv.org/abs/2007.14271,https://github.com/cmacdonald/pyterrier-msmarco-document-leaderboard-runs/blob/master/uogTrBaseDPHQ.ipynb,full ranking,,0.219,
 20200918a,2020/09/18,,"BERT Base FirstP early stop","OpenMatch - THU-MSR",,https://github.com/thunlp/OpenMatch/blob/master/docs/experiments-msmarco-doc.md,reranking,,0.329,
 20200918b,2020/09/18,,"BERT Base FirstP early stop + url","OpenMatch - THU-MSR",,https://github.com/thunlp/OpenMatch/blob/master/docs/experiments-msmarco-doc.md,reranking,,0.326,
@@ -46,4 +45,9 @@ id,date,,description,team,paper,code,type,MRR@100 (Dev),MRR@100 (Eval),tweet
 20201129-clbert,2020/11/29,,"Anonymous","Anonymous",,,full ranking,0.392,0.347,
 20201206-bcai-trad-2,2020/12/06,,"Non-neural fusion of BM25 (multi-field) and IBM Model 1 scores (v2)","Leonid Boytsov, Bosch Center for AI",https://arxiv.org/abs/2010.14848,https://github.com/oaqa/FlexNeuART,full ranking,0.338,0.298,
 20201207-ffbm25,2020/12/07,,"Multi-Field Weighted Fusion (PISA BM25 + Polyfuse MinMax CombSUM)","Joel Mackenzie (UniMelb)",,,full ranking,0.310,0.271,
-20200816-h2oloo-bm25base,2020/08/16,,"Anserini's BM25, default parameters (k1=0.9, b=0.4)","Ronak Pradeep, Rodrigo Nogueira, and Jimmy Lin - University of Waterloo",,http://anserini.io/,full ranking,0.23,0.201,
+20200816-h2oloo-bm25base,2020/08/16,,"Anserini's BM25, default parameters (k1=0.9, b=0.4)","Ronak Pradeep, Rodrigo Nogueira, and Jimmy Lin - University of Waterloo",,http://anserini.io/,full ranking,0.230,0.201,
+20201211-h2oloo-a,2020/12/11,,"Anserini's BM25 + doc2query-T5 expansion (per document), parameters tuned for recall@100 (k1=4.68, b=0.87)","Ronak Pradeep, Ruizhou Xu, Rodrigo Nogueira, and Jimmy Lin - University of Waterloo",,http://anserini.io/,full ranking,0.327,0.291,
+20201211-h2oloo-b,2020/12/11,,"Anserini's BM25 + doc2query-T5 expansion (per passage), parameters tuned for recall@100 (k1=2.56, b=0.59)","Ronak Pradeep, Ruizhou Xu, Rodrigo Nogueira, and Jimmy Lin - University of Waterloo",,http://anserini.io/,full ranking,0.321,0.290,
+20201216-ict,2020/12/16,,"PROP_step400k base + doc2query top100 (single)","Yingyan Li, Xinyu Ma - ICT, CAS",https://arxiv.org/abs/2010.10137,,full ranking,0.436,0.384,
+20201217-vespabase,2020/12/17,,"Enriched Traditional IR Baseline. Vespa WAND(doc_t5_query,body,title,url) - re-ranked 1K with LTR GBDT (LightGBM) model using 15 lexical matching features. Latency 22 ms end to end.","Jo Kristian Bergum (@jobergum), Vespa.ai team",,https://github.com/vespa-engine/sample-apps/tree/master/msmarco-ranking,full ranking,0.355,0.312,
+20201227-bert-ranker,2020/12/27,,"bert-ranker + BM25","ICT",,,full ranking,0.398,0.351,
