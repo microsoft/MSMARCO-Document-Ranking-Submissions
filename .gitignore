@@ -5,9 +5,10 @@ exclude/
 eval/docleaderboard-qrels.tsv
 eval/msmarco-docdev-qrels.tsv
 eval/msmarco-docdev-qrels.tsv.gz
-dev.txt
-eval.txt
+eval/msmarco-docdev-queries.tsv
+eval/msmarco-docdev-queries.tsv.gz
 msmarco_doc_private_key.pem
 submissions/*.tar
 submissions/*.json
 submissions/*.bin
+__pycache__
