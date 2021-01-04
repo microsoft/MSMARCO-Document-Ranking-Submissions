@@ -1,13 +1,12 @@
 import argparse
 import bz2
-import gzip
 import json
 import re
 import os
-import shutil
 import subprocess
 
-from urllib.request import urlretrieve
+# Helper to download qrels, etc.
+from download import download_dev_qrels
 
 
 def autoopen(filename, mode="rt"):
@@ -87,15 +86,7 @@ def main(args):
 
     # Evaluate dev run
     if not os.path.exists(os.path.join('eval', 'msmarco-docdev-qrels.tsv')):
-        print('Dev qrels not found, downloading...')
-        dev_qrels_url = 'https://msmarco.blob.core.windows.net/msmarcoranking/msmarco-docdev-qrels.tsv.gz'
-        dev_qrels_compressed = os.path.join('eval', 'msmarco-docdev-qrels.tsv.gz')
-        dev_qrels_uncompressed = os.path.join('eval', 'msmarco-docdev-qrels.tsv')
-        urlretrieve(dev_qrels_url, filename=dev_qrels_compressed)
-
-        with gzip.open(dev_qrels_compressed, 'rb') as f_in:
-            with open(dev_qrels_uncompressed, 'wb') as f_out:
-                shutil.copyfileobj(f_in, f_out)
+        download_dev_qrels()
 
     dev_run_mrr = evaluate_run_with_qrels(dev_run, 'msmarco-docdev-qrels.tsv')
 
