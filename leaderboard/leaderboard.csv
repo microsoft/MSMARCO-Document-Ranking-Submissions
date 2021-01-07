@@ -51,3 +51,4 @@ id,date,,description,team,paper,code,type,MRR@100 (Dev),MRR@100 (Eval),tweet
 20201216-ict,2020/12/16,,"PROP_step400k base + doc2query top100 (single)","Yingyan Li, Xinyu Ma - ICT, CAS",https://arxiv.org/abs/2010.10137,,full ranking,0.436,0.384,
 20201217-vespabase,2020/12/17,,"Enriched Traditional IR Baseline. Vespa WAND(doc_t5_query,body,title,url) - re-ranked 1K with LTR GBDT (LightGBM) model using 15 lexical matching features. Latency 22 ms end to end.","Jo Kristian Bergum (@jobergum), Vespa.ai team",,https://github.com/vespa-engine/sample-apps/tree/master/msmarco-ranking,full ranking,0.355,0.312,
 20201227-bert-ranker,2020/12/27,,"bert-ranker + BM25","ICT",,,full ranking,0.398,0.351,
+20210102-ict,2021/01/02,🏆,"PROP_step400K base (ensemble v0.1)","Yingyan Li, Xinyu Ma - ICT, CAS",https://arxiv.org/abs/2010.10137,,full ranking,0.455,0.401,
