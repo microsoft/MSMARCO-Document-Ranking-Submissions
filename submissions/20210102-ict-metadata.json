@@ -1,7 +1,0 @@
-{
-   "team": "Yingyan Li, Xinyu Ma, Jiafeng Guo, Ruqing Zhang, Yixing Fan, Xueqi Cheng - ICT, CAS",
-   "model_description": "PROP_step400K base (ensemble v0.1)",
-   "paper": "https://arxiv.org/abs/2010.10137",             
-   "code": "",              
-   "type": "full ranking" 
- }
