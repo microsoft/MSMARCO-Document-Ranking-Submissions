@@ -54,3 +54,5 @@ id,date,,description,team,paper,code,type,MRR@100 (Dev),MRR@100 (Eval),tweet
 20210102-ict,2021/01/02,🏆,"PROP_step400K base (ensemble v0.1)","Yingyan Li, Xinyu Ma - ICT, CAS",https://arxiv.org/abs/2010.10137,,full ranking,0.455,0.401,1347220842535641088
 20210113-openmatch-5,2021/01/13,,"ANCE + BERT Base MaxP + Classic IR","THU-MSR",,https://github.com/thunlp/OpenMatch/blob/master/docs/experiments-msmarco-doc.md,full ranking,0.437,0.389,
 20210114-opendomainqa,2021/01/14,,"ANCE+LongP","Soonhwan-Kwon,Sanghwan-Bae,Minyoung-Lee",,,full ranking,0.454,0.396,
+20210120-ict,2021/01/20,,"PROP_step400K base (ensemble v0.1)","Yingyan Li, Xinyu Ma, Jiafeng Guo, Ruqing Zhang, Yixing Fan, Xueqi Cheng - ICT, CAS",https://arxiv.org/abs/2010.10137,,full ranking,0.445,0.397,
+20210120-cmu,2021/01/20,,"LCE loss + HDCT (ensemble)","Luyu Gao, Zhuyun Dai - LTI, CMU",,,full ranking,0.464,0.405,
