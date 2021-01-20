@@ -143,13 +143,13 @@ def compute_metrics(qids_to_relevant_documentids, qids_to_ranked_candidate_docum
     MRR = 0
     qids_with_relevant_documents = 0
     ranking = []
-    
+
     for qid in qids_to_ranked_candidate_documents:
         if qid in qids_to_relevant_documentids and qid not in exclude_qids:
             ranking.append(0)
             target_pid = qids_to_relevant_documentids[qid]
             candidate_pid = qids_to_ranked_candidate_documents[qid]
-            for i in range(0,len(candidate_pid)):
+            for i in range(0, len(candidate_pid)):
                 if candidate_pid[i][0] in target_pid:
                     MRR += 1/(i + 1)
                     ranking.pop()
@@ -157,11 +157,12 @@ def compute_metrics(qids_to_relevant_documentids, qids_to_ranked_candidate_docum
                     break
     if len(ranking) == 0:
         raise IOError("No matching QIDs found. Are you sure you are scoring the evaluation set?")
-    
+
     MRR = MRR/len(qids_to_relevant_documentids)
     all_scores['MRR @100'] = MRR
     all_scores['QueriesRanked'] = len(set(qids_to_ranked_candidate_documents)-exclude_qids)
-    return all_scores
+
+    return all_scores, ranking
 
 
 def compute_metrics_from_files(path_to_reference, path_to_candidate, exclude_qids, perform_checks=True):
@@ -219,11 +220,17 @@ def main(args):
     path_to_candidate = args.run
     path_to_reference = args.judgments
 
-    metrics = compute_metrics_from_files(path_to_reference, path_to_candidate, exclude_qids)
+    metrics, ranks = compute_metrics_from_files(path_to_reference, path_to_candidate, exclude_qids)
     print('#####################')
     for metric in sorted(metrics):
         print('{}: {}'.format(metric, metrics[metric]))
     print('#####################')
+
+    if args.output:
+        print(f'Writing to {args.output} {len(ranks)} per-query ranks...')
+        with open(args.output, 'w') as fout:
+            for score in ranks:
+                fout.write(f'{score}\n')
 
 
 if __name__ == '__main__':
@@ -231,5 +238,6 @@ if __name__ == '__main__':
     parser.add_argument('--run', type=str, metavar='file', required=True, help='Run file.')
     parser.add_argument('--judgments', type=str, metavar='file', required=True, help='Judgments.')
     parser.add_argument('--exclude', type=str, metavar='file', required=False, help='Exclude directory.')
+    parser.add_argument('--output', type=str, metavar='file', required=False, help='Output file for per-query details.')
 
     main(parser.parse_args())
