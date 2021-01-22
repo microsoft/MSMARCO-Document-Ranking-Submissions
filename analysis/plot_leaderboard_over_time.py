@@ -7,8 +7,8 @@ plt.switch_backend('agg')
 
 import pandas as pd
 
-df = pd.read_csv('../leaderboard/leaderboard.csv')
-df['date']= pd.to_datetime(df['date'])
+df = pd.read_csv('../leaderboard/leaderboard.csv', parse_dates=['date'])
+
 
 # Plot all the runs
 ax = df.plot(x='date',y='MRR@100 (Eval)',marker='o',linestyle='none',label='Submission')
