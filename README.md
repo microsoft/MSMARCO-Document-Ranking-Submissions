@@ -46,8 +46,13 @@ This pull request should contain exactly three files:
    2. `submissions/yyyymmdd-foo.tar.enc` - the encrypted tarball
    3. `submissions/yyyymmdd-foo-metadata.json.enc` - the encrypted metadata
 
+**IMPORTANT NOTE:**
+You might want to save the _unencrypted_ version of the key you've generated, i.e., `submissions/yyyymmdd-foo.key.bin`.
+You'll need it if you want to, for example, change your metadata later on.
+If you don't keep it, you'll lose it forever, because the `pack.sh` script generates a random key each time, see [here](https://github.com/microsoft/MSMARCO-Document-Ranking-Submissions/blob/main/eval/pack.sh#L6).
+
 ## Additional Submission Guidelines
-The goal of the MS MARCO leaderboard is to encourage coopetition (cooperation + competition) among various groups working on deep learning and other methods for search that requires or benefits from large scale training data.
+The goal of the MS MARCO leaderboard is to encourage [coopetition](https://en.wikipedia.org/wiki/Coopetition) (cooperation + competition) among various groups working on deep learning and other methods for search that requires or benefits from large-scale training data.
 So, while we encourage friendly competition between different participating groups for top positions on the leaderboard, our core motivation is to ensure that over time the leaderboard provides meaningful scientific insights about how different methods compare to each other and answer questions like whether we are making real progress as a research community.
 All participants are requested to abide by this spirit of coopetition and strictly observe good scientific principles when participating.
 We will follow an honour system and expect participants to ensure that they are acting in compliance with both the policies and the spirit of this leaderboard.
@@ -65,11 +70,18 @@ Participants who may want to run ablation studies on their models are encouraged
 
 ### Metadata Updates
 
-The metadata you provide during run submission, is meant to be final.
-However, we do allow restricted updates to the metadata JSON file, for example, if you wish to associate your submission with a paper or a code repository.
-Note, however, that both team/model descriptions and the submitted runs themselves are immutable and cannot be altered once they are submitted.
-We would of course try to accomodate reasonable exceptions to this rule, e.g., fixing a typo in the team name.
-To update your metadata, simply send a pull request with an updated metadata JSON file, encrypted with the same key.
+The metadata you provide during run submission is meant to be permanent.
+However, we do allow "reasonable" updates to the metadata as long as it abides by the spirit of the leaderboard (see above).
+These reasons might include adding links to a paper or a code repository, fixing typos, clarifying the description of a run, etc.
+However, we reserve the right to reject any changes.
+
+To update the metadata of a particular run, you'll need to encrypt a new metadata JSON file _with the same key_ that you used in the original submission.
+The command to encrypt the metadata is [here](https://github.com/microsoft/MSMARCO-Document-Ranking-Submissions/blob/main/eval/pack.sh#L11).
+Hopefully, you've saved the key?
+If you've lost it, get in touch with us and we'll send you the key back via another channel (e.g., email).
+Once you've created a new metadata JSON file (i.e., `submissions/yyyymmdd-foo-metadata.json.enc`), send us a pull request with it.
+Please make the subject of the pull request something obvious like "Metadata change for yyyymmdd-foo".
+Also, please make it clear to us that _you_ have "permission" to change the metadata, e.g., the person making the change request is the same person who performed the original submission. 
 
 ### Anonymous Submissions
 
