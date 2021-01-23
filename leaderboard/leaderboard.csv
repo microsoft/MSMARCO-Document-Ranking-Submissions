@@ -55,6 +55,6 @@ id,date,,description,team,paper,code,type,MRR@100 (Dev),MRR@100 (Eval),tweet
 20210113-openmatch-5,2021/01/13,,"ANCE + BERT Base MaxP + Classic IR","THU-MSR",,https://github.com/thunlp/OpenMatch/blob/master/docs/experiments-msmarco-doc.md,full ranking,0.437,0.389,
 20210114-opendomainqa,2021/01/14,,"ANCE+LongP","Soonhwan-Kwon,Sanghwan-Bae,Minyoung-Lee",,,full ranking,0.454,0.396,
 20210120-ict,2021/01/20,,"PROP_step400K base, long query + doc2query top100 (single)","Yingyan Li, Xinyu Ma, Jiafeng Guo, Ruqing Zhang, Yixing Fan, Xueqi Cheng - ICT, CAS",https://arxiv.org/abs/2010.10137,,full ranking,0.445,0.397,
-20210120-cmu,2021/01/20,🏆,"LCE loss + HDCT (ensemble)","Luyu Gao, Zhuyun Dai - LTI, CMU",,,full ranking,0.464,0.405,1351926099891130369
+20210120-cmu,2021/01/20,🏆,"LCE loss + HDCT (ensemble)","Luyu Gao, Zhuyun Dai - LTI, CMU",https://arxiv.org/abs/2101.08751,https://github.com/luyug/Reranker/,full ranking,0.464,0.405,
 20210120-elastic-doc2query_optimized_most_fields,2021/01/20,,"Elasticsearch doc2query (T5) + optimized multi_match most_fields","Josh Devins - Elastic",https://www.elastic.co/blog/improving-search-relevance-with-data-driven-query-optimization,https://github.com/elastic/examples/tree/master/Machine%20Learning/Query%20Optimization/,full ranking,0.344,0.300,
 20210120-h2oloo,2021/01/20,,"Anserini's BM25 (per passage), parameters tuned for recall@100 (k1=2.16, b=0.61)","Ronak Pradeep, Rodrigo Nogueira, and Jimmy Lin - University of Waterloo",,http://anserini.io/,full ranking,0.275,0.246,
