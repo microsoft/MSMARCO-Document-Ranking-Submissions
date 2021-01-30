@@ -60,3 +60,4 @@ id,date,,description,team,paper,code,type,MRR@100 (Dev),MRR@100 (Eval),tweet
 20210120-h2oloo,2021/01/20,,"Anserini's BM25 (per passage), parameters tuned for recall@100 (k1=2.16, b=0.61)","Ronak Pradeep, Rodrigo Nogueira, and Jimmy Lin - University of Waterloo",,http://anserini.io/,full ranking,0.275,0.246,
 20210125-opendomainqa,2021/01/25,,"ANCE+LongP","Soonhwan-Kwon,Sanghwan-Bae,Minyoung-Lee",,,full ranking,0.457,0.401,
 20210128-ance-d-2,2021/01/28,,"Anonymous","Anonymous",,,full ranking,0.444,0.358,
+20210130-ance-d-3,2021/01/30,,"Anonymous","Anonymous",,,full ranking,0.444,0.390,
