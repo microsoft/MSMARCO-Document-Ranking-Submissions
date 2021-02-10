@@ -63,3 +63,4 @@ id,date,,description,team,paper,code,type,MRR@100 (Dev),MRR@100 (Eval),tweet
 20210130-ance-d-3,2021/01/30,,"Anonymous","Anonymous",,,full ranking,0.444,0.390,
 20210201-fridayL,2021/02/01,,"Anonymous","Anonymous",,,full ranking,0.419,0.357,
 20210204-pretrain,2021/02/04,,"Anonymous","Anonymous",,,full ranking,0.407,0.362,
+20210208-bcai-bertm1-v4,2021/02/08,,"BERT-m1 base (v4) / enriched traditional","Leonid Boytsov, Bosch Center for AI",https://arxiv.org/abs/2010.14848,https://github.com/oaqa/FlexNeuART,full ranking,0.458,0.403,
