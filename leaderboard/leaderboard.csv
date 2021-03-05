@@ -69,4 +69,5 @@ id,date,,description,team,paper,code,type,MRR@100 (Dev),MRR@100 (Eval),tweet
 20210225-opendomainqa,2021/02/25,,"ANCE MulC + LongP (single model)","Soonhwan Kwon*,Sanghwan Bae*,Minyoung Lee, Samsung SDS AI Research",,,full ranking,0.466,0.403,
 20210225-djpa,2021/02/25,,"ANCE-FirstP-HDCT(single)","Jiajia Ding*, Chunyu Li* - PingAn",,,full ranking,0.454,0.249,
 20210226-fridayL,2021/02/26,,"Anonymous","Anonymous",,,full ranking,0.451,0.405,
+20210302-ance-f,2021/03/02,,"ANCE FirstP","XJTU",,,full ranking,0.389,0.348,
 20210304-bcai-bertm1-ensemble,2021/03/04,,"BERT-m1 base (ensemble) / enriched traditional","Leonid Boytsov, Bosch Center for AI",https://arxiv.org/abs/2102.06815,https://github.com/oaqa/FlexNeuART,full ranking,0.463,0.408,
