@@ -71,3 +71,4 @@ id,date,,description,team,paper,code,type,MRR@100 (Dev),MRR@100 (Eval),tweet
 20210226-fridayL,2021/02/26,,"Anonymous","Anonymous",,,full ranking,0.451,0.405,
 20210302-ance-f,2021/03/02,,"ANCE FirstP","XJTU",,,full ranking,0.389,0.348,
 20210304-bcai-bertm1-ensemble,2021/03/04,,"BERT-m1 base (ensemble) / enriched traditional","Leonid Boytsov, Bosch Center for AI",https://arxiv.org/abs/2102.06815,https://github.com/oaqa/FlexNeuART,full ranking,0.463,0.408,
+20210308-dj,2021/03/08,,"ANCE-MaxP-HDCT(single)","Jiajia Ding*, Chunyu Li* - PingAn",,,full ranking,0.464,0.402,
