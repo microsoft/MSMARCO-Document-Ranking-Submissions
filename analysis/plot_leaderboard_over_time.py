@@ -7,8 +7,8 @@ plt.switch_backend('agg')
 
 import pandas as pd
 
-df = pd.read_csv('../leaderboard/leaderboard.csv')
-df['date']= pd.to_datetime(df['date'])
+df = pd.read_csv('../leaderboard/leaderboard.csv', parse_dates=['date'])
+
 
 # Plot all the runs
 ax = df.plot(x='date',y='MRR@100 (Eval)',marker='o',linestyle='none',label='Submission')
@@ -20,7 +20,7 @@ sota.plot(ax=ax, x='date',y='MRR@100 (Eval)',marker='o',color = 'red',linestyle=
 # Guide to formatting date ticks
 # https://matplotlib.org/3.1.1/gallery/text_labels_and_annotations/date.html
 ax.xaxis.set_major_locator(mdates.MonthLocator())
-ax.set_xlim([datetime.date(2020, 8, 1), datetime.date(2021, 2, 1)])
+ax.set_xlim([datetime.date(2020, 8, 1), datetime.date(2021, 3, 1)])
 
 plt.title('MS MARCO Document Leaderboard')
 plt.xlabel('Date')
