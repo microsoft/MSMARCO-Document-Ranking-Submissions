@@ -76,3 +76,4 @@ id,date,,description,team,paper,code,type,MRR@100 (Dev),MRR@100 (Eval),tweet
 20210312-ance-m,2021/03/12,,"ANCE MaxP","XJTU",,,full ranking,0.403,0.353,
 20210312-fridayL,2021/03/12,,"Anonymous","Anonymous",,,full ranking,0.459,0.398,
 20210315-opendomainqa,2021/03/15,🏆,"ANCE + LongP (ensemble)","Soonhwan Kwon,Minyoung Lee, Samsung SDS AI Research",,,full ranking,0.480,0.418,1371488067190677505
+20210316-xyz,2021/03/16,,"DML+","DI-AI-NLP, DXM",,,full ranking,0.475,0.411,
