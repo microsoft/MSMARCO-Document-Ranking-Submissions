@@ -80,3 +80,6 @@ id,date,,description,team,paper,code,type,MRR@100 (Dev),MRR@100 (Eval),tweet
 20210323-dj,2021/03/23,,"ANCE-MaxP-HDCT(ensemble)","Jiajia Ding*, Chunyu Li* - PingAn",,,full ranking,0.480,0.416,
 20210324-ict,2021/03/24,,"PROP_step400K base + doc2query top1000(single)","Yingyan Li, Xinyu Ma, Jiafeng Guo, Ruqing Zhang, Yixing Fan, Xueqi Cheng - ICT, CAS",https://arxiv.org/abs/2010.10137,,full ranking,0.470,0.417,
 20210325-opendomainqa,2021/03/25,,"ANCE + LongP (ensemble)","Soonhwan Kwon,Minyoung Lee, Samsung SDS AI Research",,,full ranking,0.480,0.418,
+20210330-fridayL,2021/03/30,,"ANCE+HDCT+BERT pretrained(ensemble)","TJ-university",,,full ranking,0.500,0.411,
+20210401-ict,2021/04/01,,"PROP_step400K base + doc2query top1000(ensemble v0.1)","Yingyan Li, Xinyu Ma, Jiafeng Guo, Ruqing Zhang, Yixing Fan, Xueqi Cheng - ICT, CAS",https://arxiv.org/abs/2010.10137,,full ranking,0.480,0.416,
+20210402-xyz,2021/04/02,,"DML++","DI-AI-NLP, DXM",,,full ranking,0.473,0.409,
