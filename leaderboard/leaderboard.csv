@@ -84,3 +84,6 @@ id,date,,description,team,paper,code,type,MRR@100 (Dev),MRR@100 (Eval),tweet
 20210401-ict,2021/04/01,,"PROP_step400K base + doc2query top1000(ensemble v0.1)","Yingyan Li, Xinyu Ma, Jiafeng Guo, Ruqing Zhang, Yixing Fan, Xueqi Cheng - ICT, CAS",https://arxiv.org/abs/2010.10137,,full ranking,0.480,0.416,
 20210402-xyz,2021/04/02,,"DML++","DI-AI-NLP, DXM",,,full ranking,0.473,0.409,
 20210407-fridayL,2021/04/07,,"ANCE+HDCT+BERT pretrained-domain(ensemble)","TJ-university",,,full ranking,0.487,0.413,
+20210411-ance-d-5,2021/04/11,,"Anonymous","Anonymous",,,full ranking,0.428,0.385,
+20210415-dj,2021/04/15,,"LeRetrieval","Jiajia Ding*, Chunyu Li* - PingAn",,,full ranking,0.484,0.418,
+20210415-nlpir,2021/04/15,,"ANCE+LCE loss","DBAI-NLP",,,full ranking,0.445,0.394,
