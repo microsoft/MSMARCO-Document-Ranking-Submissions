@@ -89,3 +89,5 @@ id,date,,description,team,paper,code,type,MRR@100 (Dev),MRR@100 (Eval),tweet
 20210415-nlpir,2021/04/15,,"ANCE+LCE loss","DBAI-NLP",,,full ranking,0.445,0.394,
 20210417-lce-ca,2021/04/17,,"ANCE+LCE loss+CoorAscent","DBAI-NLP",,,full ranking,0.461,0.403,
 20210418-opendomainqa,2021/04/18,🏆,"ANCE + LongP (ensemble)","Soonhwan Kwon,Minyoung Lee, Samsung SDS AI Research",,,full ranking,0.481,0.420,
+20210423-Unbreakable-Alliance,2021/04/23,,"Involvement Reranker","Allen - Huawei",,,full ranking,0.465,0.409,
+20210423-cur,2021/04/23,,"EB LCE Model","FNAI School",,,full ranking,0.470,0.413,
