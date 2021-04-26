@@ -91,3 +91,4 @@ id,date,,description,team,paper,code,type,MRR@100 (Dev),MRR@100 (Eval),tweet
 20210418-opendomainqa,2021/04/18,🏆,"ANCE + LongP (ensemble)","Soonhwan Kwon,Minyoung Lee, Samsung SDS AI Research",,,full ranking,0.481,0.420,
 20210423-Unbreakable-Alliance,2021/04/23,,"Involvement Reranker","Allen - Huawei",,,full ranking,0.465,0.409,
 20210423-cur,2021/04/23,,"EB LCE Model","FNAI School",,,full ranking,0.470,0.413,
+20210426-fnai,2021/04/26,,"LCEB Model","FNAI School",,,full ranking,0.479,0.419,
