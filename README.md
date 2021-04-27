@@ -52,6 +52,7 @@ You'll need it if you want to, for example, change your metadata later on.
 If you don't keep it, you'll lose it forever, because the `pack.sh` script generates a random key each time, see [here](https://github.com/microsoft/MSMARCO-Document-Ranking-Submissions/blob/main/eval/pack.sh#L6).
 
 ## Additional Submission Guidelines
+
 The goal of the MS MARCO leaderboard is to encourage [coopetition](https://en.wikipedia.org/wiki/Coopetition) (cooperation + competition) among various groups working on deep learning and other methods for search that requires or benefits from large-scale training data.
 So, while we encourage friendly competition between different participating groups for top positions on the leaderboard, our core motivation is to ensure that over time the leaderboard provides meaningful scientific insights about how different methods compare to each other and answer questions like whether we are making real progress as a research community.
 All participants are requested to abide by this spirit of coopetition and strictly observe good scientific principles when participating.
@@ -74,6 +75,12 @@ The metadata you provide during run submission is meant to be permanent.
 However, we do allow "reasonable" updates to the metadata as long as it abides by the spirit of the leaderboard (see above).
 These reasons might include adding links to a paper or a code repository, fixing typos, clarifying the description of a run, etc.
 However, we reserve the right to reject any changes.
+
+It is generally expected that the team description in the metadata file will include the name of the organization (e.g., university or company).
+In many cases, submissions explicitly list the contributors of the run.
+It is _not_ permissible to submit a run under an alias (or a generic, nondescript team) to first determine "how you did", and then ask for a metadata change only after you've been shown to "do well".
+We will reject metadata change requests in these circumstances.
+Thus, you're advised to make the team description as specific as possible, so that you can claim "credit" for doing well.
 
 To update the metadata of a particular run, you'll need to encrypt a new metadata JSON file _with the same key_ that you used in the original submission.
 The command to encrypt the metadata is [here](https://github.com/microsoft/MSMARCO-Document-Ranking-Submissions/blob/main/eval/pack.sh#L11).
