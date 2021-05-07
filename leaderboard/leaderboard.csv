@@ -92,3 +92,6 @@ id,date,,description,team,paper,code,type,MRR@100 (Dev),MRR@100 (Eval),tweet
 20210423-Unbreakable-Alliance,2021/04/23,,"Involvement Reranker","Allen - Huawei",,,full ranking,0.465,0.409,
 20210423-cur,2021/04/23,,"EB LCE Model","FNAI School",,,full ranking,0.470,0.413,
 20210426-fnai,2021/04/26,,"LCEB Model","FNAI School",,,full ranking,0.479,0.419,
+20210425-ict,2021/04/25,🏆,"PROP_step400K base + doc2query top1000(ensemble v0.2)","Yingyan Li, Xinyu Ma, Jiafeng Guo, Ruqing Zhang, Yixing Fan, Xueqi Cheng - ICT, CAS",https://arxiv.org/abs/2010.10137,,full ranking,0.479,0.423,
+20210427-dj,2021/04/27,,"ANCE BS+GL","Jiajia Ding*, Chunyu Li* - PingAn",,,full ranking,0.489,0.421,
+20210428-Knowledge-Retrieval,2021/04/28,,"Knowledge Retrieval","HuaweiPoissonLab, RUCIR",,,full ranking,0.482,0.423,
