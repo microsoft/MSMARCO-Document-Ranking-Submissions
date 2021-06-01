@@ -97,3 +97,6 @@ id,date,,description,team,paper,code,type,MRR@100 (Dev),MRR@100 (Eval),tweet
 20210428-Knowledge-Retrieval,2021/04/28,,"Knowledge Retrieval","HuaweiPoissonLab, RUCIR",,,full ranking,0.482,0.423,
 20210510-Knowledge-Retrieval,2021/05/10,,"Knowledge Retrieval","HuaweiPoissonLab, RUCIR",,,full ranking,0.484,0.423,
 20210524-opendomainqa,2021/05/24,🏆,"ANCE MaxP + LongP / SEED-Encoder+LongP (ensemble)","Soonhwan Kwon,Minyoung Lee, Samsung SDS AI Research",,,full ranking,0.487,0.427,
+20210525-harpsingle,2021/05/25,,"Anonymous","Anonymous",,,full ranking,0.447,0.390,
+20210525-harpensem,2021/05/25,,"Anonymous","Anonymous",,,full ranking,0.471,0.416,
+20210526-tongyuan,2021/05/26,,"Thinking Reranker (single)","Tongyuan - KCAI-Lab",,,full ranking,0.485,0.422,
