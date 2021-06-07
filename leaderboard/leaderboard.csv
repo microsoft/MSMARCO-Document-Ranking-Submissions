@@ -100,3 +100,4 @@ id,date,,description,team,paper,code,type,MRR@100 (Dev),MRR@100 (Eval),tweet
 20210525-harpsingle,2021/05/25,,"Anonymous","Anonymous",,,full ranking,0.447,0.390,
 20210525-harpensem,2021/05/25,,"Anonymous","Anonymous",,,full ranking,0.471,0.416,
 20210526-tongyuan,2021/05/26,,"Thinking Reranker (single)","Tongyuan - KCAI-Lab",,,full ranking,0.485,0.422,
+20210601-tongyuan,2021/06/01,,"Thinking Reranker (single)","Tongyuan - KCAI-Lab",,,full ranking,0.475,0.416,
