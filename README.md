@@ -81,6 +81,8 @@ In many cases, submissions explicitly list the contributors of the run.
 It is _not_ permissible to submit a run under an alias (or a generic, nondescript team) to first determine "how you did", and then ask for a metadata change only after you've been shown to "do well".
 We will reject metadata change requests in these circumstances.
 Thus, you're advised to make the team description as specific as possible, so that you can claim "credit" for doing well.
+We further request that your team description _unambiguously_ identify who you are (for example, your identify should be fairly clear given a web search).
+Submissions with metadata containing ambiguous team identifies may be rejected.
 
 To update the metadata of a particular run, you'll need to encrypt a new metadata JSON file _with the same key_ that you used in the original submission.
 The command to encrypt the metadata is [here](https://github.com/microsoft/MSMARCO-Document-Ranking-Submissions/blob/main/eval/pack.sh#L11).
