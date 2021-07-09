@@ -102,3 +102,5 @@ id,date,,description,team,paper,code,type,MRR@100 (Dev),MRR@100 (Eval),tweet
 20210526-tongyuan,2021/05/26,,"Thinking Reranker (single)","Tongyuan - KCAI-Lab",,,full ranking,0.485,0.422,
 20210601-tongyuan,2021/06/01,,"Thinking Reranker (single)","Tongyuan - KCAI-Lab",,,full ranking,0.475,0.416,
 20210608-djin_THU,2021/06/08,,"ANCE firstP+BM25+BERT base","David Jin@THU",,,full ranking,0.431,0.381,
+20210618-Huty,2021/06/18,,"Prop MaxP","Tianyu Hu - Tianjin University",,,full ranking,0.416,0.364,
+20210624-BUPT-MS,2021/06/24,🏆,"Group-HNS-Retrieval+Multi-Granularity-Rerank","BUPT-University-MS-Recommenders",,,full ranking,0.496,0.436,
