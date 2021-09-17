@@ -110,3 +110,4 @@ id,date,,description,team,paper,code,type,MRR@100 (Dev),MRR@100 (Eval),tweet
 20210714-MSRA,2021/07/14,🏆,"UniRetriever","Microsoft-Research-Asia and STCA-BingAdsSelection",,,full ranking,0.500,0.440,
 20210726-trespi,2021/07/26,,"HDCT/DeepCT + DocT5Query","Wang, Khural, Irwin, and Holmes",,https://github.com/sirwin31/neural_info_retrieval,full ranking,0.293,0.246,
 20210807-Roger,2021/08/07,,"Bert-attn ensemble","Roger Liu, Tianjin University",,,full ranking,0.478,0.416,
+20210916-unicoil,2021/09/16,,"uniCOIL-d2q","Jimmy Lin and Xueguang Ma - University of Waterloo",https://arxiv.org/abs/2106.14807,https://github.com/castorini/pyserini/blob/master/docs/experiments-unicoil.md,full ranking,0.353,0.313,
