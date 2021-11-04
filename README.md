@@ -9,7 +9,7 @@ To make a submission, please follow these instructions:
 
 1. Decide on a submission id, which will be a permanent (public) unique key. The submission id should be of the form `yyyymmdd-foo`, where `foo` can be a suffix of your choice, e.g., your group's name.
 Please keep the length reasonable.
-See [here](https://github.com/microsoft/MSMARCO-Document-Ranking-Archive/tree/main/submissions) for examples.
+See [here](https://github.com/microsoft/MSMARCO-Document-Ranking-Submissions/tree/main/submissions) for examples.
 `yyyymmdd` should correspond to the submission date of your run.
 
 2. In the directory `submissions/`, create the following files:
