@@ -1,5 +1,6 @@
 import argparse
 import bz2
+import datetime
 import json
 import re
 import os
@@ -110,16 +111,21 @@ def main(args):
         month = match.group(2)
         day = match.group(3)
 
-        if 'embargo_until' in metadata.keys():
+        if 'embargo_until' in metadata.keys() and \
+                datetime.datetime.now() < datetime.datetime.strptime(metadata['embargo_until'], '%Y/%m/%d'):
+            print('Metadata shows embargo until ' + metadata['embargo_until'])
             model_description = '"Anonymous"'
             team = '"Anonymous"'
             paper = ''
             code = ''
         else:
+            if 'embargo_until' in metadata.keys():
+                print('Embargo date of ' + metadata['embargo_until'] + ' has passed.')
+
             model_description = '"' + metadata['model_description'].replace('"', '\\"') + '"'
             team = '"' + metadata['team'].replace('"', '\\"') + '"'
-            paper = metadata['paper']
-            code = metadata['code']
+            paper = metadata['paper'] if 'paper' in metadata.keys() else ''
+            code = metadata['code'] if 'code' in metadata.keys() else ''
 
         leaderboard_entry = [id,
                              f'{year}/{month}/{day}',
