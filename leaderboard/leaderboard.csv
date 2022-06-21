@@ -115,3 +115,4 @@ id,date,,description,team,paper,code,type,MRR@100 (Dev),MRR@100 (Eval),tweet
 20211110-cmu,2021/11/10,,"coCondenser + MORES+","Luyu Gao — Carnegie Mellon University",,,full ranking,0.501,0.436,
 20220127-bcai-cmu,2022/01/27,,"hybrid retriever / improved. BERT-longp (diverse ensemble)","Leonid Boytsov, Tianyi Lin, Fangwei Gao, Jeffrey Huang, Yutian Zhao, Eric Nyberg, Bosch Center for AI & CMU",https://arxiv.org/abs/2010.14848,https://github.com/oaqa/FlexNeuART,full ranking,0.489,0.428,
 20220208-cmu,2022/02/08,🏆,"coCondenser(maxp) + MORES+","Luyu Gao - Carnegie Mellon University",,,full ranking,0.512,0.446,
+20220602-arns,2022/06/02,,"Anonymous","Anonymous",,,full ranking,0.393,0.346,
